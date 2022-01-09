@@ -9,7 +9,19 @@
          @livewireStyles
     </head>
    <body>
-    <livewire:belajar.input />
+       <br>
+       <br>
+       <br>
+       @foreach ($products as $product)
+         <ul>
+             <li>{{$product->name}}</li>
+         </ul>
+       @endforeach
+    {{--    {{$products->links()}} --}}
+       <br>
+       <br>
+       <h3 class="text-center">INI DATA DARI LIVEWIRE</h3>
+        @livewire('product.product', ['data' => $data])
 
         @livewireScripts
     </body>
